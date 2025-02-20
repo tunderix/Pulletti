@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import CountdownTimer from "~/CountdownTimer/CountdownTimer";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,6 +12,16 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
+
+      <CountdownTimer
+        date={new Date('2025-02-21T14:37:00')}
+        textSize='3rem'
+        textStyle={{ color: 'black', fontWeight: 'bold' }}
+        showDate={true}
+        capitalize={false}
+        horizontalMargin={'2px'}
+      />
+      
       <ul>
         <li>
           <a
